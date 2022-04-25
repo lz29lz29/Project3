@@ -8,6 +8,7 @@ import os
 from flask import Flask
 from app.context_processors import utility_text_processors
 from app.simple_pages import simple_pages
+from app.songs import songs
 from app.auth import auth
 from app.exceptions import http_exceptions
 from app.db.models import User
@@ -33,6 +34,8 @@ def create_app():
     bootstrap = Bootstrap5(app)
     app.register_blueprint(simple_pages)
     app.register_blueprint(auth)
+    app.register_blueprint(songs)
+
     app.context_processor(utility_text_processors)
     app.config['BOOTSTRAP_BOOTSWATCH_THEME'] = 'Simplex'
     app.register_error_handler(404, page_not_found)
