@@ -10,10 +10,11 @@ from app.context_processors import utility_text_processors
 from app.simple_pages import simple_pages
 from app.songs import songs
 from app.auth import auth
-from app.logging_config import log_con
-from app.exceptions import http_exceptions
+from app.logging_config import log_con, LOGGING_CONFIG
+from app.error_handlers import error_handlers
 from app.db.models import User
 from app.db import db
+from app.db import database
 from app.auth import auth
 from app.cli import create_database
 
@@ -45,10 +46,12 @@ def create_app():
     app.register_blueprint(auth)
     app.register_blueprint(songs)
     app.register_blueprint(log_con)
+    app.register_blueprint(database)
+    app.register_blueprint(error_handlers)
 
     app.context_processor(utility_text_processors)
 
-    app.register_error_handler(404, page_not_found)
+
     # app.add_url_rule("/", endpoint="index")
 
 
