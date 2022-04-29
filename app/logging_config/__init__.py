@@ -48,11 +48,6 @@ LOGGING_CONFIG = {
         'standard': {
             'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
         },
-         'RequestFormatter': {
-            '()': 'app.logging_config.log_formatters.RequestFormatter',
-            'format': '[%(asctime)s] [%(process)d] %(remote_addr)s requested %(url)s'
-                        '%(levelname)s in %(module)s: %(message)s'
-        }
 
     },
     'handlers': {
@@ -78,7 +73,7 @@ LOGGING_CONFIG = {
         },
         'file.handler.request': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'RequestFormatter',
+            'formatter': 'standard',
             'filename': os.path.join(config.Config.LOG_DIR,'request.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
