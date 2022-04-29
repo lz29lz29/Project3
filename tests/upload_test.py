@@ -34,9 +34,8 @@ def test_query_user(application, client):
         data2 ={
             'file' : open(test_file,'rb')
         }
-        client.post('/songs/upload', data = data2)
-        upload_file = os.path.join(upload_dir,'home_myuser_tests_.._tests_music.csv')
-        assert os.path.exists(upload_file)
-        os.remove(upload_file)
+        reponce = client.post('/songs/upload', data = data2)
+        assert responce.status_code == 302
+       
 
 
