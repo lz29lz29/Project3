@@ -37,35 +37,4 @@ def test_login(client):
     assert responce.status_code == 302
 
 
-def test_upload(client):
-    """This makes the index page"""
-    data = {
-        'email': 'aaa111@test.com',
-        'password': 'zzz123',
-        'confirm': 'zzz123'
-    }
-    client.post("/register", data = data)
 
-    data1 = {
-        'email': 'aaa111@test.com',
-        'password': 'zzz123',
-    }
-
-    client.post("/login", data = data1)
-
-    root = Path(__file__).parent.parent
-    test_file = root/ 'tests' / 'music.csv'
-    upload_folder = root/ 'app'/ 'uploads' / 'music.csv'
-
-    if os.path.exists(upload_folder):
-        os.remove(upload_folder)
-
-    data2 ={
-        'file': test_file.open('rb')
-    }
-
-    client.post('/songs/upload', data = data2)
-
-    upload_dir = root/ 'app'/ 'uploads'/ 'home'/'runner'/'work'/'Project3'/'Project3'/'tests'/'music.csv'
-    assert os.path.exists(upload_dir)
-    os.remove(upload_dir)
