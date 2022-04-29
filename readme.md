@@ -5,9 +5,9 @@
 * [Production Deployment](https://kwilliam-prod.herokuapp.com/)
 
 
-[![Development Workflow](https://github.com/kaw393939/docker_flask/actions/workflows/dev.yml/badge.svg)](https://github.com/kaw393939/docker_flask/actions/workflows/dev.yml)
+[![Development Workflow](https://github.com/lz29lz29/Project1/actions/workflows/dev.yml/badge.svg)](https://github.com/lz29lz29/Project1/actions/workflows/dev.yml)
 
-* [Developmental Deployment](https://kwilliam-dev.herokuapp.com/)
+* [Developmental Deployment](https://liming-p1-dev.herokuapp.com/)
 
 ## Setting up CI/CD
 
