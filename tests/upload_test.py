@@ -34,7 +34,7 @@ def test_query_user(application, client):
         data2 ={
             'file' : open(test_file,'rb')
         }
-        reponce = client.post('/songs/upload', data = data2)
+        responce = client.post('/songs/upload', data = data2)
         assert responce.status_code == 302
        
 
