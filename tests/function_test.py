@@ -66,6 +66,6 @@ def test_upload(client):
 
     client.post('/songs/upload', data = data2)
 
-    upload_dir = root/ 'app'/ 'uploads'/ 'home_myuser_tests_music.csv'
+    upload_dir = root/ 'app'/ 'uploads'/ 'home/runner/work/Project3/Project3/tests/music.csv'
     assert os.path.exists(upload_dir)
     os.remove(upload_dir)
