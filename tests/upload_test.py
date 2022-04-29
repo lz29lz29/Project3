@@ -5,7 +5,7 @@ from app import db
 from app.db.models import User, Song
 from faker import Faker
 
-def test_query_user(application, client):
+def test_upload_file(application, client):
 
     with application.app_context():
         data = {
