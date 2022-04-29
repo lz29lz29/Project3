@@ -36,6 +36,9 @@ def test_query_user(application, client):
         }
         responce = client.post('/songs/upload', data = data2)
         assert responce.status_code == 302
+        assert len(os.listdir(upload_dir)) == 1
+        for f in os.listdir(upload_dir):
+            os.remove(os.path.join(upload_dir,f))
        
 
 
