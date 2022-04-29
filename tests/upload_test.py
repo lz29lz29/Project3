@@ -26,7 +26,7 @@ def test_query_user(application, client):
         testdir = os.path.join(root, '../tests')
         assert os.path.exists(testdir) == True
 
-        test_file = os.path.join(testdir, 'music.csv')
+        test_file = os.path.join(testdir, 'm1.csv')
         assert os.path.exists(test_file) == True
         upload_dir = os.path.join(root, '../app/uploads')
         assert os.path.exists(upload_dir)
