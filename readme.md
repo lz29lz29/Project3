@@ -5,7 +5,7 @@
 * [Production Deployment](https://kwilliam-prod.herokuapp.com/)
 
 
-[![Development Workflow](https://github.com/lz29lz29/Porject3/actions/workflows/dev.yml/badge.svg)](https://github.com/lz29lz29/Project3/actions/workflows/dev.yml)
+[![Development Workflow](https://github.com/lz29lz29/Project1/actions/workflows/dev.yml/badge.svg)](https://github.com/lz29lz29/Project1/actions/workflows/dev.yml)
 
 * [Developmental Deployment](https://liming-p1-dev.herokuapp.com/)
 
